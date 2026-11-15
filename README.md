@@ -4,6 +4,8 @@ Four dark themes for the OPNsense web interface. They are plain theme folders: n
 
 Tested on OPNsense 26.7.9_1 (FreeBSD 15.1). Other versions are untested.
 
+Download the tarballs and `SHA256SUMS` from the [Releases page](https://github.com/ariamis/opnsense-themes/releases/latest).
+
 ## Screenshots
 
 Dashboard and login page of each theme. Hostnames, IP addresses and device names in the dashboard screenshots are blurred.
