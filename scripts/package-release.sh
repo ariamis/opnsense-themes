@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the four release tarballs and SHA256SUMS from themes/.
 # Usage: scripts/package-release.sh            (output goes to dist/)
-# Needs: bash, GNU tar, gzip, sha256sum, node (only for a syntax check).
+# Needs: bash, GNU tar, gzip, sha256sum, node (optional, syntax check only).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -45,7 +45,7 @@ for t in "${THEMES[@]}"; do
     esac
     [ -f "$f" ] || { echo "$t: main.css references missing file $u" >&2; exit 1; }
   done
-  node --check "$dst/build/js/theme.js"
+  if command -v node >/dev/null 2>&1; then node --check "$dst/build/js/theme.js"; else echo "note: node not installed, skipping the JavaScript syntax check" >&2; fi
 
   tar --sort=name --mtime="@$MTIME" --owner=0 --group=0 --numeric-owner \
       -C "$STAGE" -cf - "$t" | gzip -9n > "$DIST/opnsense-theme-$t.tar.gz"

@@ -88,7 +88,7 @@ OPNsense serves the theme files with the same address every time, so your browse
 
 There is nothing to compile: the theme folders in `themes/` already contain the finished CSS and JavaScript (the stock OPNsense SCSS was removed in 1.0.1, because it never produced the themed CSS). "Building" means checking the files and packing each theme into an installable tarball. You get the same archives as on the Releases page.
 
-You need a Linux machine (or WSL / macOS with GNU tar) with `bash`, GNU `tar`, `gzip`, `sha256sum` and `node` (only for a JavaScript syntax check). `git` is optional.
+You need a Linux machine (or WSL / macOS with GNU tar) with `bash`, GNU `tar`, `gzip`, `sha256sum`. `node` is optional (it only adds a JavaScript syntax check). `git` is optional.
 
 1. Get the source, either with git or as a ZIP from the green Code button:
 
