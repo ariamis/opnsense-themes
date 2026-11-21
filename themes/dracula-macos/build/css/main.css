@@ -6635,7 +6635,7 @@ h1,h2,h3,h4,h5,h6,.page-header{color:var(--purple)!important;border-color:var(--
 .table,.table>thead>tr>th,.table>tbody>tr>td,.table>tbody>tr>th{background-color:transparent!important;color:var(--fg)!important;border-color:var(--line)!important}
 .table-striped>tbody>tr:nth-of-type(odd),.table-hover>tbody>tr:hover{background-color:var(--line)!important}
 .form-control,select,input,textarea,.bootstrap-select .btn{background-color:var(--bg2)!important;color:var(--fg)!important;border-color:var(--line)!important}
-.form-control:focus{border-color:var(--purple)!important;box-shadow:0 0 0 2px rgba(189,147,249,.35)!important}
+.form-control:focus{border-color:var(--purple)!important;box-shadow:none!important;outline:none!important}
 .btn-default{background:var(--line)!important;color:var(--fg)!important;border-color:var(--mute)!important}
 .btn-primary{background:var(--purple)!important;color:var(--bg)!important;border-color:var(--purple)!important}
 .btn-success{background:var(--green)!important;color:var(--bg)!important;border-color:var(--green)!important}
@@ -6848,3 +6848,7 @@ input[type="file"]::-webkit-file-upload-button {
 .fw-pass, .fw-pass > *, tr.fw-pass td, .tabulator-row.fw-pass .tabulator-cell { background-color: rgba(139, 233, 253, 0.2) !important; color: #f8f8f2 !important; }
 
 /* Doughnut and pie charts (Firewall > Log Files > Overview and others): theme palette instead of the default chart colours */
+.form-control{color:var(--fg)}
+.form-control:-webkit-autofill,.form-control:-webkit-autofill:hover,.form-control:-webkit-autofill:focus{-webkit-text-fill-color:var(--bg)!important;box-shadow:0 0 0 1000px var(--fg) inset!important;caret-color:var(--bg)}
+.form-control:autofill,.form-control:autofill:hover,.form-control:autofill:focus{-webkit-text-fill-color:var(--bg)!important;box-shadow:0 0 0 1000px var(--fg) inset!important;caret-color:var(--bg)}
+.form-control:focus-visible{outline:none!important}
